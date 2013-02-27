@@ -4,6 +4,21 @@ wp snippets including but not limited to certain template types such as archive 
 
 ### menu coming soon ###
 
++ Twitter usernames
++ Twitter Hashtags
++ Clean user profile
++ Clean wp head
++ Fix capital letters after periods
++ Fix capitalisation on post titles
++ Add all settings page
++ Add authors filter drop down to all posts in admin
++ Add from email name and from email address
+
+
+
+
+
+
 
 
 
@@ -95,9 +110,9 @@ wp snippets including but not limited to certain template types such as archive 
 > }
 > add_action('admin_menu', 'all_settings_link');
 
-### set the from name and fro email address ###
-> add_filter('wp_mail_from'		,'');
-> add_filter('wp_mail_from_name'	,'']));
+### set the from name and from email address ###
+> add_filter('wp_mail_from'		,'name name');
+> add_filter('wp_mail_from_name'	,'name@domain.tld']));
 
 
 
