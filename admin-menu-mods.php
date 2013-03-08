@@ -1,3 +1,4 @@
+<?php
 /* Admin modifications for WordPress */
 
 // Remove the WP logo
@@ -48,3 +49,42 @@ function disable_bar_search() {
     $wp_admin_bar->remove_menu('search');  
 }  
 add_action( 'wp_before_admin_bar_render', 'disable_bar_search' );  
+
+// Remove admin bar updates
+function disable_bar_updates() {  
+    global $wp_admin_bar;  
+    $wp_admin_bar->remove_menu('updates');  
+}  
+add_action( 'wp_before_admin_bar_render', 'disable_bar_updates' );  
+
+// Remove footer
+function replace_footer_admin ()   
+{  
+    echo '<span id="footer-thankyou"></span>';  
+
+}  
+add_filter('admin_footer_text', 'replace_footer_admin');
+function replace_footer_version() 
+{
+    return ' ';
+}
+add_filter( 'update_footer', 'replace_footer_version', '1234');
+
+// Remove help tabs
+function wpse50787_remove_contextual_help() {
+    $screen = get_current_screen();
+    $screen->remove_help_tabs();
+}
+add_action( 'admin_head', 'wpse50787_remove_contextual_help' );
+
+// add display none styles to some admin elements
+
+function admin_register_head() {
+    $siteurl = get_option('siteurl');
+    $url = $siteurl . '/wp-content/plugins/' . basename(dirname(__FILE__)) . '/yourstyle.css';
+    echo "<style> #wpfooter {display:none;}</style>";
+}
+add_action('admin_head', 'admin_register_head');
+
+
+?>
