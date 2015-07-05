@@ -6,7 +6,7 @@ Version: 5.0.0
 Plugin URI: http://thecellarroom.net
 Author: The Cellar Room Limited
 Author URI: http://www.thecellarroom.net
-Copyright (c) 2013 The Cellar Room Limited
+Copyright (c) 2015 The Cellar Room Limited
 
 Description: Wordpress settings, filters plus extras - no options
 *Removes and adds better fields to user profile
